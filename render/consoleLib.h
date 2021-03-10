@@ -163,3 +163,32 @@ void CreateCustomEntity(int Radius, string look, string color){
     }
     createComplexEntity(Radius, look);
 }
+
+//void FunctionOnCommand(){
+//}
+
+class CLI {
+    public:
+        string shell_look;
+        string Commands[1] = {"--file create"};
+
+        void RunShell(){
+            while(true){
+                cout << shell_look;
+                cin >> shell_look;
+                if(shell_look == "--file create")
+                {
+                    //FunctionOnCommand();
+                }
+                for(int i = 0; i < 1; i++){
+                    if(shell_look == Commands[i]){
+                        continue;
+                    }
+                    else if(shell_look != Commands[i] && shell_look.length() > 0){
+                        cout << "Invalid Command";
+                        break;
+                    }
+                }
+            }
+
+};
